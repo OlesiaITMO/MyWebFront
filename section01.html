@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/cssSection01.css">
+    <style>
+    #headerBlock{
+      z-index: 1000000;
+      height: 100%;
+      width: 60%;
+      background-image: url('Images/paper.png') !important;
+      background-blend-mode: multiply !important;
+      /*background-size: cover;*/
+      background-size: 300px 50px;
+
+      /* background: #000; */
+      top: 0;
+      padding-left: 650px;
+      margin-right: 10px;
+    }
+
+    #totalBlock{
+      z-index: 200000000 !important;
+      background: #000;
+      background-color: rgba(0, 0, 0, 0.56);
+      width: 600px;
+      height: 400px;
+      height: 270px;
+      margin-left: 300px;
+      margin-top: 86px;
+
+      color: #fff;
+      color: #e4d5aa;
+    }
+
+    #inBlockT{
+      text-indent: 25px;
+      margin-left: 15px;
+      word-spacing: 8px;
+    }
+    #inBlockT2{
+      margin-left: 15px;
+      word-spacing: 8px;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div id="cupOfCoffee">&#9982;</div>
+      <div id="main" class="clickPoint" onclick="checkButton('main', 'sectionMain')">Главная
+        <div id="sectionMain" class="clickSection">
+          <a href="section01.html" id="subSec0.1" class="choice">Главная</a>
+        </div>
+      </div>
+      <div id="block1" class="clickPoint" onclick="checkButton('block1', 'section1')">Воспоминания
+        <div id="section1" class="clickSection">
+          <a href="section11.html" id="subSec1.1" class="choice">Мы &#10084;</a>
+        </div></div>
+      <div id="block2" class="clickPoint" onclick="checkButton('block2', 'section2')">Котики
+        <div id="section2" class="clickSection">
+          <a href="section21.html" id="subSec2.1" class="choice">Котейки *.*</a>
+        </div></div>
+        <div id="headerBlock"></div>
+    </div>
+
+    <div id="totalBlock" class="words"> <p id="inBlockT">Предисловие: этот сайт презентуется как небольшой подарочек любимому человеку. По сути, это галерея,
+      в которой близкие сердцу фотографии перебираются с необычными эффектами благодаря слайдеру Swiper. Если чуточку поисследовать странички, можно приметить разные пасхалки и послания.
+    Внутренние элементы страницы, за исключением заголовка и background-а, не фиксированы - проверить это можно в секции "Котики".</p>
+    <p id="inBlockT2">От Сафроновой Олеси, Коле<p></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="JS/js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Kittens</title>
+
+    <!-- <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css"> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/cssSection21.css">
+    <style>
+
+      .FtoAbsolute{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+
+      .swiper {
+        /* width: 2000px;
+        height: 1400px; */
+        position: absolute;
+        /* perspective: 1000px; */
+        /* padding: 50px 0 0 0; */
+        /* Устанавливаем абсолютное позиционирование */
+        /* top: 80px;
+        right: 80px; */
+      }
+
+       .KolyasCatsSwiper {
+         width: 220px;
+         height: 150px;
+         top: 80px;
+         right: 80px;
+           /* position: absolute; */
+           object-fit: contain;
+           /* padding: 50px 0 0 0 */
+           /* top: 80px;
+           right: 80px; */
+       }
+
+       .swiper-container-second {
+           /* position: absolute; */
+           top: 78px;
+           /* left: -800px; */
+           left: 81px;
+           width: 190px;
+           height: 145px;
+           object-fit: contain;
+       }
+
+       .JinxSwiper {
+         top: 78px;
+         left: 521px;
+         width: 140px;
+         height: 155px;
+         object-fit: contain;
+
+       }
+      .Different3Swiper {
+          top: 427px;
+          left: 81px;
+          width: 120px;
+          height: 180px;
+          object-fit: contain;
+      }
+
+      .Different2Swiper {
+          top: 433px;
+          left: 545px;
+          width: 112px;
+          height: 185px;
+          object-fit: contain;
+
+      }
+
+      .Different1Swiper {
+          top: 427px;
+          right: 100px;
+          width: 160px;
+          height: 190px;
+          object-fit: contain;
+
+      }
+
+       .swiper-wrapper{
+           text-align: center;
+       }
+
+       .swiper-slide{
+           object-fit: contain;
+           text-align: center;
+       }
+
+      .slick-slide img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          max-width: 100%;
+      }
+
+
+      .swiper-button-next, .swiper-button-prev {
+         color: #000;
+     }
+
+
+        /* .pagination{
+          color: #000;
+        } */
+
+        :root {
+          --swiper-navigation-color: black;
+          --swiper-pagination-color: black;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            z-index: 500;
+            background: url('Images/n.png') no-repeat center top !important;
+            background-size:cover !important;
+            background-attachment: fixed !important;
+             /* gap: 70px; */
+        }
+
+
+        .swiper-button-next {
+          right: -45px;
+          /* bottom: -20px; */
+        }
+
+        .swiper-button-prev {
+          left: -40px;
+        }
+      .swiper-button-next5, .swiper-button-prev4 {
+          right: -55px;
+          /* bottom: -20px; */
+      }
+
+      .swiper-button-prev5, .swiper-button-prev4 {
+          left: -50px;
+      }
+
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 20px; /* Уменьшение размера иконки внутри кнопки */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          position: absolute;
+          top: 120px;
+          transform: translateY(-50%);
+          z-index: 10;
+          width: 30px;
+          height: 30px;
+          background-size: contain; /* Обеспечивает правильное отображение иконок при изменении размеров */
+
+        }
+
+        /* .pag1 {
+          position: relative;
+          height: 100%;
+          margin-left: -60px;
+          color: #000;
+        }
+
+        .pag2 {
+          color: #000;
+        } */
+        #headerBlock{
+          z-index: 1000000;
+          height: 100%;
+          width: 85%;
+          background-image: url('Images/paper.png') !important;
+          background-blend-mode: multiply !important;
+          background-size: 300px 50px;
+
+          /* background: #000; */
+          top: 0;
+          padding-left: 650px;
+          margin-right: 10px;
+        }
+        #heartCatPage{
+          z-index: 300000 !important;
+          height: 19px;
+          width: 15px;
+          margin-left: 700px;
+          margin-top: 14px;
+          border-top: 3px groove #333;
+          border-bottom: 4px groove #333;
+          border-left: 4px groove #333;
+          border-right: 4px groove #333;
+        }
+        #pam{
+          z-index: 1000000;
+          height: 100%;
+          width: 55%;
+          background-image: url('Images/paw.jpg') !important;
+          background-blend-mode: multiply !important;
+          background-size: cover;
+          background-size: 54px 54px;
+
+          /* background: #000; */
+          margin-top: 0;
+          padding-left: 0px;
+          margin-right: 0px;
+        }
+
+        #swiperDifWords3{
+            margin-top: 2px;
+        }
+
+        #pancakes{
+            margin-top: -10px;
+            width: 115px;
+            height: 185px;
+
+        }
+        #sun{
+            margin-top: -10px;
+            width: 160px;
+            height: 190px;
+        }
+
+      /*#swiperDifWords1{*/
+      /*    margin-top: 5px;*/
+      /*}*/
+
+   </style>
+   <!-- <link rel="stylesheet" href="CSS/cssSection21.css"> -->
+</head>
+<body >
+  <div id="header">
+    <!-- <div id="cupOfCoffee">&#9982;</div> -->
+    <p id="pam" title="Люблю..."></p>
+    <!-- <div ></div> -->
+    <div id="main" class="clickPoint" onclick="checkButton('main', 'sectionMain')">Главная
+      <div id="sectionMain" class="clickSection">
+        <a href="section01.html" id="subSec0.1" class="choice">Главная</a>
+        <!-- <a href="" id="subSec0.2" class="choice"></a> -->
+      </div>
+    </div>
+    <div id="block1" class="clickPoint" onclick="checkButton('block1', 'section1')">Воспоминания
+      <div id="section1" class="clickSection">
+        <a href="section11.html" id="subSec1.1" class="choice">Мы &#10084;</a>
+        <!-- <a href="" id="subSec1.2" class="choice">Секция 2</div> -->
+      </div></div>
+    <div id="block2" class="clickPoint" onclick="checkButton('block2', 'section2')">Котики
+      <div id="section2" class="clickSection">
+        <a href="section21.html" id="subSec2.1" class="choice">Котейки *.*</a>
+        <!-- <a href="" id="subSec2.2" class="choice">Секция 2</a> -->
+      </div></div>
+    <!-- <div id="block3" class="clickPoint" onclick="checkButton('block3', 'section3')">Пожелания
+      <div id="section3" class="clickSection">
+        <div id="section3.1" class="choice">Секция 1</div>
+        <div id="section3.2" class="choice">Секция 2</div>
+        <div id="section3.3" class="choice">Секция 3</div>
+      </div></div> -->
+        <div id="headerBlock"></div>
+
+      <!-- <div id="heartCatPage" title="Люблю...">&#10084;</div> -->
+
+</div>
+
+
+  <p id="totalWords" class="words">
+    Коты для души
+  </p>
+
+
+  <div class="FtoAbsolute"></div>
+
+  <br>
+
+
+      <div class="swiper KolyasCatsSwiper">
+
+        <div class="KolyasCatsSwiper__wrapper swiper-wrapper">
+          <div class="KolyasCatsSwiper__slide swiper-slide">
+              <div class="KolyasCatsSwiper_image slick-slide img">
+                <img src="Images/Musha.jpg" alt="Image">
+              </div>
+          </div>
+
+          <div class="KolyasCatsSwiper__slide swiper-slide">
+              <div class="KolyasCatsSwiper__image slick-slide img">
+                <img src="Images/Nikki.jpg" alt="Image">
+              </div>
+          </div>
+
+          <div class="KolyasCatsSwiper__slide swiper-slide">
+              <div class="KolyasCatsSwiper__image slick-slide img">
+                <img src="Images/Nikki_2.jpg" alt="Image">
+              </div>
+          </div>
+
+          <div class="KolyasCatsSwiper__slide swiper-slide">
+              <div class="KolyasCatsSwiper__image slick-slide img">
+                <img src="Images/Persi.jpg" alt="Image">
+              </div>
+          </div>
+
+          <div class="KolyasCatsSwiper__slide swiper-slide">
+              <div class="KolyasCatsSwiper__image slick-slide img">
+                <img src="Images/Felix.jpg" alt="Image">
+              </div>
+          </div>
+
+        </div>
+        <div id="swiperLoveWords" class="words">
+          Котики любимого
+        </div>
+
+          <!-- <div class="swiper-pagination pag1"></div> -->
+
+          <div class="swiper-button-prev swiper-button-prev1"></div>
+          <div class="swiper-button-next swiper-button-next1"></div>
+
+    </div>
+
+
+
+  <br>
+
+  <div class="swiper swiper-container-second">
+    <div class="swiper-container-second__wrapper swiper-wrapper">
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya7.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya1.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya2.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya3.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya4.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya5.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya6.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="swiper-container-second__slide swiper-slide">
+        <div class="swiper-container-second__image slick-slide img">
+          <img src="Images/Putya8.jpg" alt="Image">
+        </div>
+      </div>
+    </div>
+
+    <div id="swiperPutyaWords" class="words">
+      Путя
+    </div>
+
+      <!-- <div class="swiper-pagination pag2"></div> -->
+      <div class="swiper-button-prev swiper-button-prev2"></div>
+      <div class="swiper-button-next swiper-button-next2"></div>
+    <!-- </div> -->
+  </div>
+
+
+  <!--Третий слайдер-->
+
+  <div class="swiper JinxSwiper">
+
+    <div class="JinxSwiper__wrapper swiper-wrapper">
+      <!-- <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper_image slick-slide img">
+            <img src="Images/jinx1.jpeg" alt="Image">
+          </div>
+      </div> -->
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx7.jpg" alt="Image">
+          </div>
+      </div>
+
+
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx4.jpeg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx2.jpeg" alt="Image">
+          </div>
+      </div>
+      <!-- <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx3.jpg" alt="Image">
+          </div>
+      </div> -->
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx5.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx6.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx8.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx9.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx9.webp" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx10.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx11.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx12.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx13.jpg" alt="Image">
+          </div>
+      </div>
+      <div class="JinxSwiper__slide swiper-slide">
+          <div class="JinxSwiper__image slick-slide img">
+            <img src="Images/jinx14.jpg" alt="Image">
+          </div>
+      </div>
+    </div>
+    <div id="swiperJinxWords" class="words">
+      Наша Джинкс
+    </div>
+
+      <!-- <div class="swiper-pagination pag3"></div> -->
+
+      <div class="swiper-button-prev swiper-button-prev3"></div>
+      <div class="swiper-button-next swiper-button-next3"></div>
+  </div>
+
+<br>
+
+  <div class="swiper Different1Swiper">
+      <div class="Different1Swiper__wrapper swiper-wrapper">
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper_image slick-slide img">
+                  <img src="Images/Kitty1.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper__image slick-slide img">
+                  <img src="Images/Kitty2.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper__image slick-slide img">
+                  <img src="Images/Kitty3.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper__image slick-slide img">
+                  <img src="Images/Kitty4.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper__image slick-slide img">
+                  <img src="Images/Kitty5.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper__image slick-slide img">
+                  <img src="Images/Kitty6.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different1Swiper__slide swiper-slide">
+              <div class="Different1Swiper__image slick-slide img">
+                  <img src="Images/Kitty7.jpg" alt="Image">
+              </div>
+          </div>
+      </div>
+      <div id="swiperDifWords1" class="words">
+          Котиков
+      </div>
+
+      <!-- <div class="swiper-pagination pag1"></div> -->
+
+      <div class="swiper-button-prev swiper-button-prev4"></div>
+      <div class="swiper-button-next swiper-button-next4"></div>
+  </div>
+
+
+  <div class="swiper Different2Swiper">
+      <div class="Different2Swiper__wrapper swiper-wrapper">
+          <div class="Different2Swiper__slide swiper-slide">
+              <div class="Different2Swiper__image slick-slide img">
+                  <img src="Images/PictureWithKitty2.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different2Swiper__slide swiper-slide">
+              <div class="Different1Swiper_image slick-slide img">
+                  <img src="Images/PictureWithKitty1.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different2Swiper__slide swiper-slide">
+              <div class="Different2Swiper__image slick-slide img">
+                  <img src="Images/PictureWithKitty3.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different2Swiper__slide swiper-slide">
+              <div class="Different2Swiper__image slick-slide img">
+                  <img src="Images/PictureWithKitty4.jpg" alt="Image">
+              </div>
+          </div>
+      </div>
+      <div id="swiperDifWords2" class="words">
+          Ещё немного
+      </div>
+
+      <!-- <div class="swiper-pagination pag1"></div> -->
+
+      <div class="swiper-button-prev swiper-button-prev5"></div>
+      <div class="swiper-button-next swiper-button-next5"></div>
+  </div>
+
+
+  <div class="swiper Different3Swiper">
+      <div class="Different3Swiper__wrapper swiper-wrapper">
+          <div class="Different3Swiper__slide swiper-slide">
+              <div class="Different1Swiper_image slick-slide img">
+                  <img src="Images/lastSwiper1.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different3Swiper__slide swiper-slide">
+              <div class="Different3Swiper__image slick-slide img">
+                  <img src="Images/lastSwiper2.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different3Swiper__slide swiper-slide">
+              <div id="pancakes" class="Different3Swiper__image slick-slide img">
+                  <img src="Images/lastSwiper3.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different3Swiper__slide swiper-slide">
+              <div class="Different3Swiper__image slick-slide img">
+                  <img src="Images/lastSwiper4.jpg" alt="Image">
+              </div>
+          </div>
+          <div class="Different3Swiper__slide swiper-slide">
+              <div id="sun" class="Different3Swiper__image slick-slide img">
+                  <img src="Images/lastSwiper5.jpg" alt="Image">
+              </div>
+          </div>
+      </div>
+      <div id="swiperDifWords3" class="words">
+          Тут
+      </div>
+
+      <!-- <div class="swiper-pagination pag1"></div> -->
+
+      <div class="swiper-button-prev swiper-button-prev6"></div>
+      <div class="swiper-button-next swiper-button-next6"></div>
+  </div>
+
+<!--
+</div> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="JS/js.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const imageSlider = new Swiper('.KolyasCatsSwiper', {
+              // loop: true,
+              // simulateTouch: false,  // Disable touch events
+              //   allowTouchMove: false, // Disable touch drag
+              //   keyboard: {
+              //       enabled: false, // Disable keyboard navigation
+              //   },
+              // navigation: {
+              //     nextEl: '.swiper-button-next',
+              //     prevEl: '.swiper-button-prev',
+              // },
+              loop: true,
+              simulateTouch: false,  // Disable touch events
+              allowTouchMove: false, // Disable touch drag
+              keyboard: {
+                  enabled: false, // Disable keyboard navigation
+              },
+
+              effect: 'cards',
+              cardsEffect: {
+                slideShadows: true,
+              },
+              // effect: 'cube',
+              // cubeEffect: {
+              //   slideShadows: false,
+              // },
+              navigation: {
+                  nextEl: '.KolyasCatsSwiper .swiper-button-next1',
+                  prevEl: '.KolyasCatsSwiper .swiper-button-prev1',
+              },
+              // pagination: {
+              //   .image-slider
+              //     el: '.image-slider .pag1',
+              //     clickable: true,
+              // },
+              // speed: 500,
+          });
+        });
+
+          document.addEventListener('DOMContentLoaded', function() {
+          const swiper2 = new Swiper('.swiper-container-second', {
+             loop: true,
+             simulateTouch: false,  // Disable touch events
+             allowTouchMove: false, // Disable touch drag
+             keyboard: {
+                 enabled: false, // Disable keyboard navigation
+             },
+
+             effect: 'cards',
+             cardsEffect: {
+               slideShadows: true,
+             },
+             navigation: {
+                 nextEl: '.swiper-container-second .swiper-button-next2',
+                 prevEl: '.swiper-container-second .swiper-button-prev2',
+             },
+             // pagination: {
+             //   el: '.swiper-container-second .pag2',
+             //   clickable: true,
+             // }
+          });
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+          const imageSlider = new Swiper('.JinxSwiper', {
+              loop: true,
+              simulateTouch: false,  // Disable touch events
+              allowTouchMove: false, // Disable touch drag
+              keyboard: {
+                  enabled: false, // Disable keyboard navigation
+              },
+
+              effect: 'cards',
+              cardsEffect: {
+                slideShadows: false,
+              },
+
+              navigation: {
+                  nextEl: '.JinxSwiper .swiper-button-next3',
+                  prevEl: '.JinxSwiper .swiper-button-prev3',
+              },
+              // pagination: {
+              //   .image-slider
+              //     el: '.image-slider .pag1',
+              //     clickable: true,
+              // },
+              // speed: 500,
+          });
+
+
+          const different1Slider = new Swiper('.Different1Swiper', {
+              loop: true,
+              simulateTouch: false,  // Disable touch events
+              allowTouchMove: false, // Disable touch drag
+              keyboard: {
+                  enabled: false, // Disable keyboard navigation
+              },
+
+              effect: 'cards',
+              cardsEffect: {
+                  slideShadows: false,
+              },
+
+              navigation: {
+                  nextEl: '.Different1Swiper .swiper-button-next4',
+                  prevEl: '.Different1Swiper .swiper-button-prev4',
+              },
+
+          });
+
+          const different2Slider = new Swiper('.Different2Swiper', {
+              loop: true,
+              simulateTouch: false,  // Disable touch events
+              allowTouchMove: false, // Disable touch drag
+              keyboard: {
+                  enabled: false, // Disable keyboard navigation
+              },
+
+              effect: 'cards',
+              cardsEffect: {
+                  slideShadows: false,
+              },
+
+              navigation: {
+                  nextEl: '.Different2Swiper .swiper-button-next5',
+                  prevEl: '.Different2Swiper .swiper-button-prev5',
+              },
+
+          });
+
+          const different3Slider = new Swiper('.Different3Swiper', {
+              loop: true,
+              simulateTouch: false,  // Disable touch events
+              allowTouchMove: false, // Disable touch drag
+              keyboard: {
+                  enabled: false, // Disable keyboard navigation
+              },
+
+              effect: 'cards',
+              cardsEffect: {
+                  slideShadows: false,
+              },
+
+              navigation: {
+                  nextEl: '.Different3Swiper .swiper-button-next6',
+                  prevEl: '.Different3Swiper .swiper-button-prev6',
+              },
+
+          });
+
+
+      });
+
+  </script>
+</body>
+</html>
