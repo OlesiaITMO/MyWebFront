@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример выпадающего меню</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../CSS/cssSection21.css">
+    <style>
+        /* Ваши стили */
+    </style>
+</head>
+<body>
+  <!-- Верхняя часть страницы -->
+  <div id="header">
+    <div id="cupOfCoffee">&#9982;</div>
+    <!-- Остальные элементы -->
+  </div>
+
+  <!-- Контент -->
+  <p id="totalWords" class="words">Коты для души</p>
+
+  <!-- Первый Swiper -->
+  <div class="swiper swiper-container-second">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <img src="../Images/Felix.jpg" alt="Image">
+      </div>
+      <div class="swiper-slide">
+          <img src="../Images/Persi.jpg" alt="Image">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Второй Swiper -->
+  <div class="swiper">
+    <div class="wrapper">
+      <div class="image-slider swiper-container">
+        <div class="image-slider__wrapper swiper-wrapper">
+          <!-- Слайды -->
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- Контент вне Swiper'ов -->
+  <div id="swiperLoveWords" class="words">
+    Котики любимого
+  </div>
+
+  <!-- Скрипты -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="../JS/js.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const imageSlider = new Swiper('.image-slider', {
+              loop: true,
+              simulateTouch: false,
+              allowTouchMove: false,
+              effect: 'cards',
+              navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+              },
+              pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+              },
+              speed: 500,
+          });
+
+          const swiper2 = new Swiper('.swiper-container-second', {
+             loop: true,
+             navigation: {
+                 nextEl: '.swiper-container-second .swiper-button-next',
+                 prevEl: '.swiper-container-second .swiper-button-prev',
+             },
+             pagination: {
+                 el: '.swiper-container-second .swiper-pagination',
+                 clickable: true,
+             },
+          });
+      });
+  </script>
+</body>
+</html>

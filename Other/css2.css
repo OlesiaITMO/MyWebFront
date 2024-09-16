@@ -1,0 +1,129 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://avatars.mds.yandex.net/i?id=e966aa395c407c8f12c07f7d33c84bb2_l-10997011-images-thumbs&n=13') no-repeat center top;
+    background-size:cover;
+    background-attachment: fixed
+
+}
+#header{
+  width: auto;
+  height: 50px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  border-top: 2px solid #333;
+  background-color: #6e6b61;
+}
+
+/* #cupOfCoffee{
+
+} */
+
+.heart {
+position: fixed;
+width: 100px;
+height: 100px;
+background-color: red;
+border: solid 1px red;
+
+
+}
+/* .heart {
+  transform: rotateY(35deg) scale(0);
+   border-radius: 20% 20% 40% 40%
+} */
+
+/* .heart{
+clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+border-radius: 50%
+} */
+
+
+ /* .heart{
+clip-path: polygon(50% 60%, 80% 50%, 50% 100%, 20% 50%);
+} */
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    margin: 50px;
+
+}
+
+ .heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+ .heart::after {
+    left: 50px;
+    top: 0;
+}
+@keyframes heartbeat {
+ 0% {
+   transform: scale( 1 );
+ }
+ 20% {
+   transform:
+     translateX(5%)
+     translateY(5%);
+     font-size: 14px;
+ }
+ 40% {
+   transform:
+     translateX(7%)
+     translateY(7%);
+ }
+}
+
+/* p {
+  animation: heartbeat 1s infinite;
+} */
+p {
+     font-size: 20px;
+     color: #6aabca;
+     display: inline-block;
+     animation: heartbeat 1s infinite;
+}
+
+       @keyframes heartbeat {
+           0% {
+               transform: scale(1);
+           }
+           20% {
+               transform: scale(1.2);
+           }
+           40% {
+               transform: scale(1);
+           }
+           60% {
+               transform: scale(1.2);
+           }
+           80% {
+               transform: scale(1);
+           }
+           }
+           100% {
+               transform: scale(1.2);
+           }
+}
+
+
+
+
+/* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */

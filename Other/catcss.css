@@ -1,0 +1,128 @@
+
+.screen {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #222; /* Цвет экрана */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.scratch {
+    position: absolute;
+    width: 4px; /* Начальная ширина царапины */
+    height: 120px; /* Длина царапины */
+    background: linear-gradient(to bottom, transparent 50%, red 100%); /* Градиент крови */
+    border-radius: 2px; /* Закругление */
+    opacity: 0; /* Невидимость по умолчанию */
+    animation: revealScratch 5.3s infinite ; /* Анимация появления */
+
+
+    transform-origin: bottom; /* Сужение к верхней части */
+}
+
+.scratch1 {
+    left: 50%;
+    top: 10%;
+    transform: rotate(-30deg) scaleY(1.2); /* Угол и масштаб */
+    animation-delay: 0.5s; /* Задержка анимации */
+}
+
+.scratch2 {
+    left: 40%;
+    top: 20%;
+    transform: rotate(-15deg) scaleY(1.1);
+    animation-delay: 0.7s;
+}
+
+.scratch3 {
+    left: 60%;
+    top: 20%;
+    transform: rotate(15deg) scaleY(1.1);
+    animation-delay: 0.9s;
+}
+
+.scratch4 {
+    left: 35%;
+    top: 30%;
+    transform: rotate(-5deg) scaleY(1);
+    animation-delay: 1.1s;
+}
+
+.scratch5 {
+    left: 65%;
+    top: 30%;
+    transform: rotate(5deg) scaleY(1);
+    animation-delay: 1.3s;
+}
+
+/* Анимация появления царапин */
+@keyframes revealScratch {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    70% {
+        height: 120px;
+        opacity: 1;
+    }
+    100% {
+        height: 120px;
+        opacity: 1;
+        width: 1px; /* Сужение к концу */
+    }
+}
+
+/* Кровавые капли */
+.blood-drip {
+    position: absolute;
+    width: 4px; /* Ширина капли */
+    height: 0; /* Начальная высота */
+    background-color: red; /* Цвет капли */
+    border-radius: 50%; /* Круглая капля */
+    animation: dripAnimation 1s infinite; /* Анимация капли */
+    opacity: 0; /* Невидимость по умолчанию */
+}
+
+.drip1 {
+    left: 40%;
+    top: 48%;
+    animation-delay: 2s;
+}
+
+.drip2 {
+    left: 49%;
+    top: 40%;
+    animation-delay: 2.5s;
+}
+
+.drip3 {
+    left: 60%;
+    top: 48%;
+    animation-delay: 3s;
+}
+
+/* Анимация капли */
+@keyframes dripAnimation {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    10% {
+        height: 10px;
+        opacity: 1;
+    }
+    100% {
+        height: 30px; /* Длина капли */
+        opacity: 0; /* Исчезновение капли */
+        transform: translateY(50px); /* Падение капли */
+    }
+}
+
+
+
+
+
+
+
